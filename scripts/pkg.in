@@ -388,6 +388,7 @@ ERROR=false
 case "$TERMUX_APP_PACKAGE_MANAGER" in
 	apt)
 		case "$CMD" in
+			l*) dpkg -i "$@";;
 			f*) dpkg -L "$@";;
 			sh*|inf*) apt show "$@";;
 			add|i*) select_mirror; update_apt_cache; apt install "$@";;
@@ -404,6 +405,7 @@ case "$TERMUX_APP_PACKAGE_MANAGER" in
 		esac;;
 	pacman)
 		case "$CMD" in
+			l*) pacman -U "$@";;
 			f*) pacman -Ql "$@";;
 			sh*|inf*) pacman -Qi "$@";;
 			add|i*) pacman -Sy --needed "$@";;

@@ -39,3 +39,9 @@ jobs:
       - name: Zip installation folder
         run: |
           zip -r install.zip build/install
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: install-artifact
+          path: install.zip

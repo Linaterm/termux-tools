@@ -40,6 +40,8 @@ show_help() {
 	echo
 	echo '  install <packages>   - Install specified packages.'
 	echo
+	echo '  local <packages>     - Install Local Packages'
+	echo
 	echo '  list-all             - List all packages available in repositories.'
 	echo
 	echo '  list-installed       - List installed packages.'
